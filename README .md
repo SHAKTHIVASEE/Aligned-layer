@@ -24,85 +24,29 @@ source /root/.bashrc
 
 ### Download an SP1 ELF file
 
-```shell
-rustup target add riscv32i-unknown-none-elf
+```
+curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/get_proof_test_files.sh | bash
 ```
 
-### 9. Then install the Nexus zkVM:
-
-```shell
-cargo install --git https://github.com/nexus-xyz/nexus-zkvm nexus-tools --tag 'v1.0.0'
-```
-
-### 10. Create a new Nexus project
-
-```curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/get_proof_test_files.sh | bash
-```
-
-This will create a new Rust project directory with the following structure:
-
-```shell
-./nexus-project
-├── Cargo.lock
-├── Cargo.toml
-└── src
-    └── main.rs
-```
-
-### 11. Move to Directory, Replace the code and press CNTL+X, Y, Enter
+### Sending proof
 
 ```
-cd nexus-project
-cd src
-nano main.rs
+rm -rf ~/aligned_verification_data/ &&
+aligned submit \
+--proving_system SP1 \
+--proof ~/.aligned/test_files/sp1_fibonacci.proof \
+--vm_program ~/.aligned/test_files/sp1_fibonacci-elf \
+--aligned_verification_data_path ~/aligned_verification_data \
+--conn wss://batcher.alignedlayer.com
 ```
-As an example, you can change the content of `./src/main.rs` to:
 
-```rust
-#![no_std]
-#![no_main]
+### Now you can see a explorer link, Check with expolrer link your batch verifiaction.. 
 
-fn fib(n: u32) -> u32 {
-    match n {
-        0 => 0,
-        1 => 1,
-        _ => fib(n - 1) + fib(n - 2),
-    }
-}
-
-#[nexus_rt::main]
-fn main() {
-    let n = 7;
-    let result = fib(n);
-    assert_eq!(result, 13);
-}
+```
+aligned verify-proof-onchain \ --aligned-verification-data ~/aligned_verification_data/*.json \ --rpc https://ethereum-holesky-rpc.publicnode.com \ --chain holesky
 ```
 
 
-### 12. Run your program
+### Now you see the msg ( your proof was verified ), take the screenshot.. and follow our telegram group for further steps..
 
-```bash
-cargo nexus run
-```
-
-### 13. step-by-step execution trace on the NVM, run:
-
-```bash
-cargo nexus run -v
-```
-
-### 14. Prove your program - Generate a proof for your Rust program using the Nexus zkVM.
-
-```shell
-cargo nexus prove
-```
-
-### 15. Verify your proof - Finally, load and verify the proof:
-
-```shell
-cargo nexus verify
-```
-
-
-#### Most importanly  commit and push the repo in github 
 
