@@ -2,7 +2,7 @@
 
 Aligned works with EigenLayer to leverage ethereum consensus mechanism for ZK proof verification. Working outside the EVM, this allows for cheap verification of any proving system. This enables the usage of cutting edge algorithms, that may use new techniques to prove even faster. Even more, proving systems that reduce the proving overhead and add verifier overhead, now become economically feasable to verify thanks to Aligned.
 
-## 1. Buy a minimum confrigration VPS
+## 1. Buy a minimum configuration VPS
 ## 2. Login with VPS and Start the Proof task
 
 ### Install CURL
