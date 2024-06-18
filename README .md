@@ -49,4 +49,6 @@ aligned verify-proof-onchain \ --aligned-verification-data ~/aligned_verificatio
 
 ### Now you see the msg ( your proof was verified ), take the screenshot.. and follow our telegram group for further steps..
 
+For upcoming projects follow in github..
+
 
