@@ -1,21 +1,16 @@
-# The Nexus zkVM
+# Aligned Open Testnet
 
-The Nexus zkVM is a modular, extensible, open-source, and highly-parallelized zkVM, designed to run at *a trillion CPU cycles proved per second* given enough machine power.
+Aligned works with EigenLayer to leverage ethereum consensus mechanism for ZK proof verification. Working outside the EVM, this allows for cheap verification of any proving system. This enables the usage of cutting edge algorithms, that may use new techniques to prove even faster. Even more, proving systems that reduce the proving overhead and add verifier overhead, now become economically feasable to verify thanks to Aligned.
 
-## 1. Fork the Official Repo - https://github.com/nexus-xyz/nexus-zkvm 
-## 2. Login with Gitpod.io
-
-## 3. Press CNTRL+C
-
-## 4. Install Cmake
-
+## 1. Buy a minimum confrigration VPS
+## 2. Login with VPS and paste one by one
+INSTALL Curl
 ```
-sudo apt install cmake
+sudo apt update -y
+sudo apt upgrade -y
+``` 
 ```
-## 5. Install Build Essential 
-```
-sudo apt update
-sudo apt install build-essential
+sudo apt-get install curl -y
 ```
 
 
