@@ -22,7 +22,7 @@ curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batche
 source /root/.bashrc
 ```
 
-### 8. With the RISC-V target:
+### Download an SP1 ELF file
 
 ```shell
 rustup target add riscv32i-unknown-none-elf
@@ -36,8 +36,7 @@ cargo install --git https://github.com/nexus-xyz/nexus-zkvm nexus-tools --tag 'v
 
 ### 10. Create a new Nexus project
 
-```shell
-cargo nexus new nexus-project
+```curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/get_proof_test_files.sh | bash
 ```
 
 This will create a new Rust project directory with the following structure:
