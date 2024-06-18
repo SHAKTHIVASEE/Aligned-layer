@@ -40,7 +40,7 @@ aligned submit \
 --conn wss://batcher.alignedlayer.com
 ```
 
-### Now you can see a explorer link, Check with expolrer link your batch verifiaction.. 
+### Now you can see a explorer link, Check with explorer link your batch verification.. 
 
 ```
 aligned verify-proof-onchain \ --aligned-verification-data ~/aligned_verification_data/*.json \ --rpc https://ethereum-holesky-rpc.publicnode.com \ --chain holesky
