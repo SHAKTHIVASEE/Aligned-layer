@@ -4,7 +4,8 @@ Aligned works with EigenLayer to leverage ethereum consensus mechanism for ZK pr
 
 ## 1. Buy a minimum confrigration VPS
 ## 2. Login with VPS and Start the Proof task
-INSTALL Curl
+
+### Install CURL
 ```
 sudo apt update -y
 sudo apt upgrade -y
@@ -12,18 +13,13 @@ sudo apt upgrade -y
 ```
 sudo apt-get install curl -y
 ```
-
-
 ### Download ALignedProof
+```
+curl -L https://raw.githubusercontent.com/yetanotherco/aligned_layer/main/batcher/aligned/install_aligned.sh | bash
 
 ```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 ```
-### 7. Input 1 and proceed 
-
-```
-. "$HOME/.cargo/env"
+source /root/.bashrc
 ```
 
 ### 8. With the RISC-V target:
